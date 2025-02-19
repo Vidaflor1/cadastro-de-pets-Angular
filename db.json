@@ -1,0 +1,61 @@
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.Vo2xzPy5XJ5L6N_M4E_NKR2wJYI3uIDeNf8QbnGtqPo",
+  "pets": [
+    {
+      "id": "1",
+      "name": "Bolinha",
+      "breed": "Pincher",
+      "color": "Branco",
+      "sexo": "F",
+      "specie": "Cachorro"
+    },
+    {
+      "id": "3",
+      "name": "Rex",
+      "breed": "Labrador",
+      "color": "Amarelo",
+      "sexo": "M",
+      "specie": "Cachorro"
+    },
+    {
+      "id": "4",
+      "name": "Miau4444",
+      "breed": "Siames",
+      "color": "Cinza",
+      "sexo": "M",
+      "specie": "Gato"
+    },
+    {
+      "id": "5",
+      "name": "Fifi",
+      "breed": "Poodle",
+      "color": "Branco",
+      "sexo": "F",
+      "specie": "Cachorro"
+    },
+    {
+      "id": "2511",
+      "name": "bolo",
+      "breed": "Novo",
+      "color": "Novo",
+      "sexo": "F",
+      "specie": "Novo",
+      "ownerid": "000001"
+    },
+    {
+      "id": "ec52",
+      "name": "Novo2",
+      "breed": "Novo2",
+      "color": "Novo2",
+      "sexo": "f",
+      "specie": "Novo2",
+      "ownerid": "000001"
+    }
+  ],
+  "usuarios": [
+    {
+      "name": "usuario@email.com",
+      "senha": "123456"
+    }
+  ]
+}

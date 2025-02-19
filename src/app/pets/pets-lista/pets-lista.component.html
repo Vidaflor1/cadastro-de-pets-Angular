@@ -1,0 +1,57 @@
+<div class="card mt-3">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <div class="float-left">
+        <h4>Pets</h4>
+      </div>
+      <div class="float-right">
+        <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo Pet</button>
+        {{''}}
+        <button type="button" class="btn btn-secondary" (click)="onRefresh()">Atualizar</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Raça</th>
+          <th>Cor</th>
+          <th>Sexo</th>
+          <th>Espécie</th>
+          <th>ID do Dono</th>
+          <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let pet of pets$">
+            <td>{{pet.id}}</td>
+            <td>{{pet.name}}</td>
+            <td>{{pet.breed}}</td>
+            <td>{{pet.color}}</td>
+            <td>{{pet.sexo}}</td>
+            <td>{{pet.specie}}</td>
+            <td>{{pet.ownerid}}</td>
+            <td>
+              <span class="float-left">
+                <button class="btn btn-outline-warning mb-1 btn-sm" (click)="onEdit(pet.id ?? '')">
+                  Alterar
+                </button>
+                {{''}}
+                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(pet)">
+                  Remover
+                </button>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <ng-template #loading>
+        Carregando Pets...
+      </ng-template>
+      
+    </div>
+</div>
+
+

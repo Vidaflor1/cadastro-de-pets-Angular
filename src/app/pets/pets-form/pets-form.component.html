@@ -1,0 +1,151 @@
+<!-- Início do formulário com a classe 'needs-validation' para validação customizada e o 'formGroup' associado -->
+<form class="row g-3 needs-validation padding" novalidate [formGroup]="form">
+  
+  <!-- Div que contém a estrutura do formulário com o título e o estilo -->
+  <div class="form-row py-4 bg-body-tertiary">
+    
+    <!-- Título do formulário centralizado -->
+    <div class="col-12 text-center">
+      <!-- Cabeçalho do formulário com a classe 'fw-bold' para texto em negrito -->
+      <h1 class="h3 fw-bold">{{ isEditing ? 'Editar Pet' : 'Novo Pet' }}</h1>
+
+    </div>
+
+    <!-- Campo de entrada para o nome do pet -->
+    <div class="col-12">
+      <div class="form-floating">
+        <!-- Input de texto para o nome do pet, com a validação de erro caso necessário -->
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Nome do Pet"
+          formControlName="name"
+          [ngClass]="{ 'is-invalid': submitted && hasError('name') }"
+        />
+        <!-- Rótulo para o campo 'Nome do Pet' -->
+        <label for="name">Nome do Pet</label>
+
+        <!-- Mensagens de erro quando o campo não é válido -->
+        <div class="invalid-feedback" *ngIf="hasSpecificError('name', 'required')">
+          Por favor informe o nome do pet.
+        </div>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('name', 'minlength')">
+          Nome precisa ter no mínimo 3 caracteres.
+        </div>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('name', 'maxlength')">
+          Nome precisa ter no máximo 250 caracteres.
+        </div>
+        <!-- Mensagem de sucesso -->
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+    </div>
+
+    <!-- Campo de entrada para a raça do pet -->
+    <div class="col-12">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="breed"
+          placeholder="Raça do Pet"
+          formControlName="breed"
+          [ngClass]="{ 'is-invalid': submitted && hasError('breed') }"
+        />
+        <label for="breed">Raça do Pet</label>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('breed', 'required')">
+          Por favor informe a raça do pet.
+        </div>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('breed', 'maxlength')">
+          Raça precisa ter no máximo 250 caracteres.
+        </div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+    </div>
+
+    <!-- Campo de entrada para a cor do pet -->
+    <div class="col-12">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="color"
+          placeholder="Cor do Pet"
+          formControlName="color"
+          [ngClass]="{ 'is-invalid': submitted && hasError('color') }"
+        />
+        <label for="color">Cor do Pet</label>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('color', 'required')">
+          Por favor informe a cor do pet.
+        </div>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('color', 'maxlength')">
+          Cor precisa ter no máximo 250 caracteres.
+        </div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="input-group mb-3">
+        <select class="form-select" id="sexo" formControlName="sexo" [ngClass]="{ 'is-invalid': submitted && form.get('sexo')?.invalid }">
+          <option value="" disabled selected>Escolha o Sexo do Pet</option>
+          <option value="F">F</option>
+          <option value="M">M</option>
+        </select>
+        <label class="input-group-text" for="sexo">Sexo do Pet</label>
+      </div>
+    </div>
+    <!-- Campo de entrada para o sexo do pet 
+    <div class="col-12">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="sexo"
+          placeholder="Sexo do Pet"
+          formControlName="sexo"
+          [ngClass]="{ 'is-invalid': submitted && hasError('sexo') }"
+        />
+        <label for="sexo">Sexo do Pet</label>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('sexo', 'required')">
+          Por favor informe o sexo do pet.
+        </div>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('sexo', 'maxlength')">
+          Sexo precisa ter no máximo 250 caracteres.
+        </div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+    </div>-->
+
+    <!-- Campo de entrada para a espécie do pet -->
+    <div class="col-12">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="specie"
+          placeholder="Espécie do Pet"
+          formControlName="specie"
+          [ngClass]="{ 'is-invalid': submitted && hasError('specie') }"
+        />
+        <label for="specie">Espécie do Pet</label>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('specie', 'required')">
+          Por favor informe a espécie do pet.
+        </div>
+        <div class="invalid-feedback" *ngIf="hasSpecificError('specie', 'maxlength')">
+          Espécie precisa ter no máximo 250 caracteres.
+        </div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+    </div>
+
+    <!-- Botões de Salvar e Cancelar -->
+    <div class="col-12">
+      <!-- Botão para salvar os dados -->
+      <button type="submit" class="btn btn-primary w-100" (click)="onSubmit()">Salvar</button>
+
+      <!-- Botão para cancelar e limpar o formulário -->
+      <button type="button" class="btn btn-dark w-100" (click)="onCancel()">Cancelar</button>
+    </div>
+  </div>
+</form>

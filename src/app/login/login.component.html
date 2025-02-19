@@ -1,0 +1,42 @@
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Login</h5>
+          <form (ngSubmit)="fazerLogin()">
+            <div class="mb-3">
+              <label for="username" class="form-label">Usuário:</label>
+              <input
+                id="username"
+                type="text"
+                [(ngModel)]="usuario.name"
+                name="username"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Senha:</label>
+              <input
+                id="password"
+                type="password"
+                [(ngModel)]="usuario.senha"
+                name="password"
+                class="form-control"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+          </form>
+
+          <!-- Mensagem de erro com Bootstrap -->
+          <div *ngIf="errorMessage" class="alert alert-danger mt-3" role="alert">
+            {{ errorMessage }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

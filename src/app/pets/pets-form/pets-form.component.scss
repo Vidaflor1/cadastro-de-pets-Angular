@@ -1,0 +1,32 @@
+/* Espaçamento superior */
+.padding {
+    padding-top: 10px; /* Reduz o espaço superior */
+}
+
+/* Estilo do formulário */
+form {
+    margin: 0 auto;          /* Centraliza o formulário */
+    width: 100%;             /* Permite que o formulário ocupe toda a largura disponível */
+    max-width: 500px;        /* Define a largura máxima do formulário */
+    padding: 10px;           /* Reduz o preenchimento interno */
+    border-radius: 8px;      /* Deixa os cantos arredondados */
+}
+
+/* Margem inferior nos divs */
+div {
+    margin-bottom: 10px; /* Reduz a margem entre os campos */
+}
+
+/* Ajusta a altura e o espaçamento dos inputs */
+input.form-control {
+    height: 40px;        /* Reduz a altura dos campos de entrada */
+    padding: 5px 10px;   /* Reduz o preenchimento interno */
+    width: 100%;         /* Garante que os inputs ocupem toda a largura disponível */
+}
+
+/* Ajusta os botões */
+button {
+    margin-top: 10px;    /* Reduz o espaçamento vertical entre os botões */
+    height: 40px;        /* Reduz a altura dos botões */
+    width: 100%;         /* Faz os botões ocuparem toda a largura disponível */
+}
