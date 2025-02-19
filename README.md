@@ -1,28 +1,31 @@
 json-server --watch db.json
-# CadastroDePets
+# Descrição do Projeto: Sistema de Gestão de Pets com Autenticação
+Objetivo
+O projeto consiste em um sistema web para gerenciamento de informações sobre pets, permitindo a realização de operações como cadastro, listagem, edição e exclusão de registros. Além disso, conta com um sistema de autenticação de usuários para controlar o acesso às funcionalidades.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Tecnologias Utilizadas
+Angular: Framework para desenvolvimento do frontend.
+RxJS: Biblioteca para manipulação de fluxos assíncronos.
+Bootstrap (ngx-bootstrap/modal): Para exibição de modais e alertas.
+HTTPClient: Para realizar requisições à API backend.
+Router Angular: Para gerenciamento de rotas e navegação entre páginas.
+Módulos do Sistema
+1. Autenticação de Usuário
+Implementação do LoginComponent para entrada de credenciais do usuário.
+Uso do AuthService para validação de login.
+AuthGuard garantindo que apenas usuários autenticados possam acessar determinadas rotas.
+2. Gestão de Pets
+PetsService: Serviço responsável por conectar-se à API e manipular dados de pets.
+Métodos para listar, buscar, criar, editar e excluir pets.
+PetsListaComponent: Página para exibir a lista de pets cadastrados, permitindo exclusão e edição.
+PetsFormComponent: Formulário para cadastro e edição de pets, com validações e mensagens de erro.
+3. Controle de Navegação
+AuthGuard impede acesso a determinadas rotas sem autenticação.
+Router permite navegação para edição e criação de registros.
+Funcionalidades Principais
+✔️ Login e autenticação de usuários.
+✔️ Controle de acesso via AuthGuard.
+✔️ Listagem de pets com carregamento assíncrono.
+✔️ Cadastro, edição e exclusão de pets.
+✔️ Alertas modais para confirmar ações.
+✔️ Integração com API externa para persistência de dados.
